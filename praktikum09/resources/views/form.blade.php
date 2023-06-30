@@ -19,7 +19,7 @@
                         <!-- form validasi -->
                         {{-- Tambahin method & action --}}
                         <form method="POST" action="{{ url('hasil') }}">
-                            {{-- Tambahin crsf --}}
+                            {{-- Tambahin csrf --}}
                             @csrf
                             <div class="form-group">
                                 <label for="nama">Nama</label>

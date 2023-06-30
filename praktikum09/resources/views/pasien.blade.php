@@ -79,35 +79,31 @@
                 </div>
             </div>
         </form>
-				{{-- Tangkap dan tampilin hasil form menggunakan GET --}}
+				@php
+            if (isset($_GET['submit'])) {
+                // tangkep data lalu simpen
+                $nama = $_GET['nama'];
+                $tanggal_periksa = $_GET['tanggal_periksa'];
+                $tanggal_lahir = $_GET['tanggal_lahir'];
+                $jk = $_GET['jk'];
+                $tekanan_darah = $_GET['tekanan_darah'];
+                $asam = $_GET['asam'];
+                $kolesterol = $_GET['kolesterol'];
+                $gula = $_GET['gula'];
+            
+                // tampilin data
+                echo 'Nama : ' . $nama . '<br>';
+                echo 'Tanggal Periksa : ' . $tanggal_periksa . '<br>';
+                echo 'Tgl Lahir : ' . $tanggal_lahir . '<br>';
+                echo 'Jenis Kelamin : ' . $jk . '<br>';
+                echo 'Tekanan Darah : ' . $tekanan_darah . '<br>';
+                echo 'Asam : ' . $asam . '<br>';
+                echo 'Kolesterol : ' . $kolesterol . '<br>';
+                echo 'Gula : ' . $gula . '<br>';
+            }
+        @endphp
     </div>
 
-    <hr>
-
-    <div style="margin: 20px 80px">
-      @php
-        if (isset($_GET["submit"])) {
-          // Tangkap value input
-          $nama = $_GET["nama"];
-          $tanggal_periksa = $_GET["tanggal_periksa"];
-          $tanggal_lahir = $_GET["tanggal_lahir"];
-          $jk = $_GET["jk"];
-          $tekanan_darah = $_GET["tekanan_darah"];
-          $asam = $_GET["asam"];
-          $kolesterol = $_GET["kolesterol"];
-          $gula = $_GET["gula"];
-
-          echo "Nama: " . $nama . "<br>";
-          echo "Tanggal Periksa: " . $tanggal_periksa . "<br>";
-          echo "Tanggal Lahir: " . $tanggal_lahir . "<br>";
-          echo "Jenis Kelamin: " . $jk . "<br>";
-          echo "Tekanan Darah: " . $tekanan_darah . "<br>";
-          echo "Asam Urat: " . $asam. "<br>";
-          echo "Kolesterol: " . $kolesterol. "<br>";
-          echo "Gula Darah: " . $gula . "<br>";
-        }
-    @endphp
-    </div>
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->

@@ -14,25 +14,19 @@
     <div class="container">
         <h1>Form Skill</h1>
 				{{-- Tambahin method & action --}}
-        <form method="POST" action="{{ url('skillhasil') }}">
+        <form>
             @csrf
 
             <div class="form-group row">
                 <label for="nama" class="col-4 col-form-label">Nama</label>
                 <div class="col-8">
                     <input id="nama" name="nama" type="text" class="form-control">
-                    @error('nama')
-                        <span class="text-danger">{{ $message }}</span>
-                    @enderror
                 </div>
             </div>
             <div class="form-group row">
                 <label for="email" class="col-4 col-form-label">Email</label>
                 <div class="col-8">
                     <input id="email" name="email" type="email" class="form-control">
-                    @error('email')
-                        <span class="text-danger">{{ $message }}</span>
-                    @enderror
                 </div>
             </div>
             <div class="form-group row">
@@ -43,9 +37,6 @@
                         <option value="Bandung">Bandung</option>
                         <option value="Depok">Depok</option>
                     </select>
-                    @error('lokasi')
-                        <span class="text-danger">{{ $message }}</span>
-                    @enderror
                 </div>
             </div>
             <div class="form-group row">
@@ -61,9 +52,6 @@
                             value="Perempuan">
                         <label for="jenis_kelamin_1" class="custom-control-label">Perempuan</label>
                     </div>
-                    @error('jenis_kelamin')
-                        <span class="text-danger">{{ $message }}</span>
-                    @enderror
                 </div>
             </div>
             <div class="form-group row">
@@ -89,9 +77,6 @@
                             value="PHP">
                         <label for="skill[]_3" class="custom-control-label">PHP</label>
                     </div>
-                    @error('skill')
-                        <span class="text-danger">{{ $message }}</span>
-                    @enderror
                 </div>
             </div>
             <div class="form-group row">
